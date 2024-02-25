@@ -3,13 +3,13 @@
 @section('content')
 <h1> Feedback Form</h1>
 <br>
-<form action="">
+<form method="POST" action="/feedback/send">
     @csrf
 
     <input type="hidden" name="_token" value="{{ csrf_token() }}">
     <div class="mb-3">
-        <label for="username" class="form-label">Full Name <span class="text-danger">(Required)</span></label>
-        <input type="text" class="form-control" name="username" id="username">
+        <label for="name" class="form-label">Full Name <span class="text-danger">(Required)</span></label>
+        <input type="text" class="form-control" name="name" id="name">
     </div> 
     
     <div class="mb-3">
